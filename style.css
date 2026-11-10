@@ -1,0 +1,255 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #ffdce9,
+        #e6ddff,
+        #d8f1ff
+    );
+}
+
+/* MAIN CONTAINER */
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* INVITATION CARD */
+.card {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.88);
+
+    padding: 40px 25px;
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(190, 130, 180, 0.18);
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TEXT */
+.top-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.small-title {
+    color: #d88eaf;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+h1 {
+    color: #d77fa5;
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #9d8aab;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.cute-decoration {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+/* BUTTON AREA */
+.button-area {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    margin-top: 20px;
+}
+
+/* YES BUTTON */
+.yes-button {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+
+    padding: 15px 22px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #ff9fc5,
+        #f5b5dc
+    );
+
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    box-shadow: 0 5px 15px rgba(240, 140, 185, 0.3);
+
+    transition: transform 0.25s ease;
+    z-index: 2;
+}
+
+/* NO BUTTON */
+.no-button {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #b9c8f5;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: left 0.2s ease, top 0.2s ease;
+    z-index: 3;
+}
+
+/* FOOTER */
+.footer-text {
+    color: #c6a2bd;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* FLOATING HEARTS */
+.background-hearts span {
+    position: fixed;
+    bottom: -50px;
+
+    font-size: 25px;
+    opacity: 0.5;
+
+    animation: floatUp 10s linear infinite;
+    pointer-events: none;
+}
+
+.background-hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.background-hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 3s;
+}
+
+.background-hearts span:nth-child(3) {
+    left: 45%;
+    animation-delay: 1s;
+}
+
+.background-hearts span:nth-child(4) {
+    left: 65%;
+    animation-delay: 5s;
+}
+
+.background-hearts span:nth-child(5) {
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.background-hearts span:nth-child(6) {
+    left: 92%;
+    animation-delay: 4s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* SUCCESS MESSAGE */
+.success-message {
+    color: #e58eb4;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+
+    .card {
+        padding: 35px 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .yes-button {
+        font-size: 13px;
+        padding: 14px 18px;
+    }
+
+    .no-button {
+        font-size: 13px;
+    }
+}
